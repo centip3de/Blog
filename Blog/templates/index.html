@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+        <h1>Partially Applied</h1>
+    </head>
+    <body>
+        <div class="intro">
+            <p>
+                My name is Kyle and I'm a sofware engineer. This blog is about the random things I'm working on, 
+                or the random things that interest me. The posts here do not necessarily reflect the opinions and views of my employer.
+            </p>
+        </div>
+        Posts:
+        <div class="posts">
+            <div class="post">
+                {{ first }}
+            </div>
+            <div class="post">
+                {{ second }}
+            </div>
+            <div class="post">
+                {{ third }}
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    head {
+        font-weight: bold;
+    }
+
+    body {
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.6;
+        font-size: 18px;
+        color: #444;
+        padding: 0 10px
+    }
+    
+    h1, h2, h3 {
+        line-height: 1.2;
+    }
+
+    .post::before {
+        border-bottom: 1px solid  rgb(6, 128, 209);
+        content: "";
+        display: block;
+        padding-bottom: 0;
+        width: 100%;
+    }
+
+    .post:after {
+        border-bottom: 1px solid  rgb(6, 128, 209);
+        content: "";
+        display: block;
+        padding-bottom: 0;
+        width: 100%;
+    }
+</style>
