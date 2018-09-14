@@ -3,3 +3,6 @@ Flask
 
 # Markdown compiler
 Markdown
+
+# WSGI server
+gunicorn
