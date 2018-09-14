@@ -26,4 +26,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 2 and sys.argv[1] == "-d":
         app.run(debug=True, host='0.0.0.0', port=28080)
 
-    app.run(debug=False, port=80)
+    app.run(debug=False, host='0.0.0.0', port=80)
