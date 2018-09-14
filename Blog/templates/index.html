@@ -2,25 +2,25 @@
     <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
         <h1>Partially Applied</h1>
+        <em><h3>Both in life and in functions.</h3> </em>
     </head>
+    <title> Partially Applied </title>
     <body>
         <div class="intro">
             <p>
-                My name is Kyle and I'm a sofware engineer. This blog is about the random things I'm working on, 
-                or the random things that interest me. The posts here do not necessarily reflect the opinions and views of my employer.
+                My name is Kyle and I occasionally program things. This my blog is about the random things I'm working on, 
+                the random things that interest me, or whatever else. The posts here do not necessarily reflect the opinions and views of my employer.
             </p>
         </div>
-        Posts:
+        <div class="post-text">
+            <h2>Posts:</h2>
+        </div>
         <div class="posts">
+            {% for post in posts %}
             <div class="post">
-                {{ first }}
+                {{ post }}
             </div>
-            <div class="post">
-                {{ second }}
-            </div>
-            <div class="post">
-                {{ third }}
-            </div>
+            {% endfor %}
         </div>
     </body>
 </html>
@@ -36,14 +36,19 @@
         line-height: 1.6;
         font-size: 18px;
         color: #444;
-        padding: 0 10px
+        padding: 0 10px;
+        font-family: 'Roboto';
     }
     
     h1, h2, h3 {
         line-height: 1.2;
     }
 
-    .post::before {
+    .post {
+        padding-bottom: 10px;
+    }
+
+    .post-text:after {
         border-bottom: 1px solid  rgb(6, 128, 209);
         content: "";
         display: block;
